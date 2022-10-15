@@ -34,10 +34,10 @@ jobs: # Những công việc dev làm thường ngày: lấy code, build, chạy
       - name: Distribute jar-war file # Gửi file .jar .war đi đâu, CD nhảy vào ...
         run: mkdir staging && cp dist/*.jar staging # tạo thư mục staging chứa file .jar .war sau khi build      
      
-      - name: Make hyperlink to jar-war file # Tạo hyperlink để download build 
+      - name: DOWNLOAD # Tạo hyperlink để download build 
         uses: actions/upload-artifact@v1
         with:
-          name: DOWNLOAD_JAR_HERe # Bản build được đánh version 1.0-SNAPSHOT
+          name: 1.0-SNAPSHOT.jar # Bản build được đánh version 1.0-SNAPSHOT
           path: staging
 
 # End of CI workflow file
